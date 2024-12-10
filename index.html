@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abrir pestañas y cerrar</title>
+    <style>
+        /* Estilos generales de la página */
+        body {
+            background-color: black; /* Fondo negro */
+            color: white; /* Texto blanco */
+            font-family: Arial, sans-serif; /* Fuente fácil de leer */
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* Para que ocupe toda la altura de la ventana */
+            display: flex;
+            justify-content: center; /* Centrar el contenido horizontalmente */
+            align-items: center; /* Centrar el contenido verticalmente */
+            text-align: center;
+        }
+
+        /* Estilo para el texto */
+        h1 {
+            font-size: 10rem; /* Fuente muy grande */
+            margin: 0;
+        }
+    </style>
+    <script type="text/javascript">
+        function abrirPestanas() {
+            // URLs de las webs que se abrirán en nuevas pestañas
+            var urls = [
+                "https://https://moodle.uam.es/my/",   // Primera URL
+                "https://web.whatsapp.com/",   // Segunda URL
+                "https://drive.google.com/drive/"    // Tercera URL
+            ];
+
+            // Abrir cada URL en una nueva pestaña
+            urls.forEach(function(url) {
+                window.open(url, '_blank');
+            });
+
+            // Cerrar la página después de 5 segundos 
+            setTimeout(function() {
+                window.close();
+            }, 5000); // 5000 milisegundos = 5 segundos
+        }
+
+        // Llamamos a la función cuando la página se haya cargado
+        window.onload = abrirPestanas;
+    </script>
+</head>
+<body>
+    <h1>Hola</h1>
+</body>
+</html>
